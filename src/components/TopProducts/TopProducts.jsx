@@ -32,8 +32,7 @@ const TopProducts = ({ handleOrderPopup }) => {
   // ];
 
   useEffect(() => {
-    axios
-      .get("/api/products/getAllProducts")
+     axios.get("/api/products/getAllProducts") // or correct backend port
       .then((response) => {
         setProductData(response.data);
       })
@@ -42,7 +41,8 @@ const TopProducts = ({ handleOrderPopup }) => {
       });
   }, []);
 
-  console.log(productData, "productData");
+
+  console.log("Product Data: ", productData);
   return (
     <div>
       <div className="container w-full">
